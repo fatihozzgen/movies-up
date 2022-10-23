@@ -1,0 +1,38 @@
+.navbar {
+  width: 100%;
+  height: 75px;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+}
+
+.movie-logo {
+  margin-left: 12%;
+}
+
+/* .up-logo {
+  position: absolute;
+  margin-left: 20%;
+} */
+
+.navigation {
+  margin-left: 7%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 270px;
+}
+
+.navigation > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: large;
+}
+
+.button-fav {
+  color: #f9ca24;
+}
+
+.nav-input {
+  margin-left: auto;
+}
