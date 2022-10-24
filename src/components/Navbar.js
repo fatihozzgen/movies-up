@@ -8,14 +8,13 @@ function Navbar() {
     <>
       <div className="navbar">
         <div className="nav-container">
-          <div className="movie-logo">
+          <Link to="/">
             <img src={Movie} />
-            {/* <img className="up-logo" src={Up} /> */}
-          </div>
+          </Link>
 
           <div className="navigation">
             <Link to="/">
-              <div> Home </div>{" "}
+              <div> Home </div>
             </Link>
 
             <Link to="/favorite">

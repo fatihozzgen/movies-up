@@ -25,7 +25,6 @@ function Filter() {
           <button>Search</button>
         </div>
       </div>
-      ;
     </>
   );
 }
