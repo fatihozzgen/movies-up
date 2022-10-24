@@ -32,3 +32,10 @@
   margin-top: 12%;
   margin-left: 15%;
 }
+.home-filter {
+  position: absolute;
+  width: 50%;
+  top: 46.5%;
+  margin-left: 13%;
+  margin-right: 25%;
+}

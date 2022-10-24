@@ -33,23 +33,8 @@
   color: #f9ca24;
 }
 
-.nav-input {
+.navbar-search {
   margin-left: auto;
   width: 290px;
   height: 35px;
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  background: #f3f3f3;
-}
-
-.nav-input > input {
-  width: 82%;
-  height: 100%;
-  border: none;
-  outline: none;
-  padding-left: 4%;
-  border-radius: 8px;
-
-  background: #f3f3f3;
 }

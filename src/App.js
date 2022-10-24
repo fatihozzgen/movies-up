@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import "./styles/navbar.css";
 import "./styles/home.css";
+import "./styles/filter.css";
+import "./styles/search.css";
 
 function App() {
   return (

@@ -4,6 +4,7 @@ import Yellow from "../logo/yellow.png";
 import Movieup from "../logo/wmovieup.png";
 import Circle from "../logo/circle.png";
 import Lorem from "../logo/lorem.png";
+import Filter from "./Filter";
 
 function Home() {
   return (
@@ -15,6 +16,9 @@ function Home() {
         <img className="wmovieup  " src={Movieup} />
         <img className="wcircle" src={Circle} />
         <img className="wlorem" src={Lorem} />
+      </div>
+      <div className="home-filter">
+        <Filter />
       </div>
     </div>
   );

@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Movie from "../logo/movie.png";
-import Up from "../logo/up.png";
-import { RiSearchLine } from "react-icons/ri";
+import Search from "./Search";
 
 function Navbar() {
   return (
@@ -23,10 +22,8 @@ function Navbar() {
               <div className="button-fav">Favorite</div>
             </Link>
           </div>
-
-          <div className="nav-input">
-            <input placeholder="Enter movie name here" />
-            <RiSearchLine size={25} color={"#A4A4A4"} />
+          <div className="navbar-search">
+            <Search />
           </div>
         </div>
       </div>
