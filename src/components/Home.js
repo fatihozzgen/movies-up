@@ -8,8 +8,9 @@ import Filter from "./Filter";
 import Popular from "../logo/popular.png";
 import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "../styles/card.css";
 
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -39,8 +40,8 @@ function Home() {
 
       <div className="popular-slider">
         <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
+          slidesPerView={4}
+          spaceBetween={-90}
           slidesPerGroup={3}
           loop={true}
           loopFillGroupWithBlank={true}
@@ -171,7 +172,6 @@ function Home() {
               </div>
             </div>
           </SwiperSlide>
-          ...
         </Swiper>
       </div>
     </div>

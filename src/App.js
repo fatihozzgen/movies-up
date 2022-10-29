@@ -16,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favorite" element={<Favorites />} />
-          {/* <Route path="login" element={<Login />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
