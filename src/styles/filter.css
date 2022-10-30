@@ -16,6 +16,7 @@
   height: 45%;
   background: #f3f3f3;
   border-radius: 5px;
+  border: 1px solid tomato;
 }
 
 .year-container > select {
