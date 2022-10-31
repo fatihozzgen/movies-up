@@ -12,6 +12,7 @@
   align-items: center;
 }
 .line-background > div {
+  font-size: 0.4rem;
   font-weight: 500;
 }
 
@@ -34,5 +35,5 @@ a {
 }
 
 .fav-text > img {
-  width: 6%;
+  width: 3rem;
 }
