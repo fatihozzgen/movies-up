@@ -39,6 +39,7 @@
   top: 9.7rem;
   margin-left: 17.5%;
   margin-right: 17.5%;
+
   /* border: 1px solid tomato; */
 }
 
@@ -53,9 +54,17 @@
 
 .popular-slider {
   /* border: 1px solid tomato; */
-  width: 81%;
-  margin-left: 9.5%;
-  margin-right: 9.5%;
+  width: 100%;
+  /* margin-left: 9.5%; */
+  /* margin-right: 9.5%; */
+  mask-image: linear-gradient(to right, transparent 2%, black 25%);
+  /* mask-image: linear-gradient(to left, black, transparent); */
+  /* mask-image: linear-gradient(to right, black, transparent); */
+}
+
+.popular-slider2 {
+  width: 100%;
+  mask-image: linear-gradient(to left, transparent 2%, black 25%);
 }
 
 .swiper {

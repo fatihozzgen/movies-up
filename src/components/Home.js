@@ -37,142 +37,143 @@ function Home() {
       <div className="popular-text ">
         <img src={Popular} />
       </div>
+      <div className="popular-slider2">
+        <div className="popular-slider">
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={-90}
+            slidesPerGroup={3}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="card">
+                <div>
+                  <img className="card-image" src={Godfather} />
+                </div>
 
-      <div className="popular-slider">
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={-90}
-          slidesPerGroup={3}
-          loop={true}
-          loopFillGroupWithBlank={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <div className="card">
-              <div>
-                <img className="card-image" src={Godfather} />
+                <div className="bottom-side">
+                  <div className="imbd-container">
+                    <img className="card-imbd" src={imbd} />
+                    <div className="card-point"> 8.8</div>
+                  </div>
+                  <div className="card-year">2019</div>
+                  <div className="card-name">The Godfather</div>
+                  <div className="card-detail">
+                    The aging patriarch of an organized crime dynasty transfers
+                    control of his clandestine empire to his reluctant son.
+                  </div>
+                </div>
               </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div>
+                  <img className="card-image" src={Godfather} />
+                </div>
 
-              <div className="bottom-side">
-                <div className="imbd-container">
-                  <img className="card-imbd" src={imbd} />
-                  <div className="card-point"> 8.8</div>
-                </div>
-                <div className="card-year">2019</div>
-                <div className="card-name">The Godfather</div>
-                <div className="card-detail">
-                  The aging patriarch of an organized crime dynasty transfers
-                  control of his clandestine empire to his reluctant son.
+                <div className="bottom-side">
+                  <div className="imbd-container">
+                    <img className="card-imbd" src={imbd} />
+                    <div className="card-point"> 8.8</div>
+                  </div>
+                  <div className="card-year">2019</div>
+                  <div className="card-name">The Godfather</div>
+                  <div className="card-detail">
+                    The aging patriarch of an organized crime dynasty transfers
+                    control of his clandestine empire to his reluctant son.
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card">
-              <div>
-                <img className="card-image" src={Godfather} />
-              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div>
+                  <img className="card-image" src={Godfather} />
+                </div>
 
-              <div className="bottom-side">
-                <div className="imbd-container">
-                  <img className="card-imbd" src={imbd} />
-                  <div className="card-point"> 8.8</div>
-                </div>
-                <div className="card-year">2019</div>
-                <div className="card-name">The Godfather</div>
-                <div className="card-detail">
-                  The aging patriarch of an organized crime dynasty transfers
-                  control of his clandestine empire to his reluctant son.
+                <div className="bottom-side">
+                  <div className="imbd-container">
+                    <img className="card-imbd" src={imbd} />
+                    <div className="card-point"> 8.8</div>
+                  </div>
+                  <div className="card-year">2019</div>
+                  <div className="card-name">The Godfather</div>
+                  <div className="card-detail">
+                    The aging patriarch of an organized crime dynasty transfers
+                    control of his clandestine empire to his reluctant son.
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card">
-              <div>
-                <img className="card-image" src={Godfather} />
-              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div>
+                  <img className="card-image" src={Godfather} />
+                </div>
 
-              <div className="bottom-side">
-                <div className="imbd-container">
-                  <img className="card-imbd" src={imbd} />
-                  <div className="card-point"> 8.8</div>
-                </div>
-                <div className="card-year">2019</div>
-                <div className="card-name">The Godfather</div>
-                <div className="card-detail">
-                  The aging patriarch of an organized crime dynasty transfers
-                  control of his clandestine empire to his reluctant son.
+                <div className="bottom-side">
+                  <div className="imbd-container">
+                    <img className="card-imbd" src={imbd} />
+                    <div className="card-point"> 8.8</div>
+                  </div>
+                  <div className="card-year">2019</div>
+                  <div className="card-name">The Godfather</div>
+                  <div className="card-detail">
+                    The aging patriarch of an organized crime dynasty transfers
+                    control of his clandestine empire to his reluctant son.
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card">
-              <div>
-                <img className="card-image" src={Godfather} />
-              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div>
+                  <img className="card-image" src={Godfather} />
+                </div>
 
-              <div className="bottom-side">
-                <div className="imbd-container">
-                  <img className="card-imbd" src={imbd} />
-                  <div className="card-point"> 8.8</div>
-                </div>
-                <div className="card-year">2019</div>
-                <div className="card-name">The Godfather</div>
-                <div className="card-detail">
-                  The aging patriarch of an organized crime dynasty transfers
-                  control of his clandestine empire to his reluctant son.
+                <div className="bottom-side">
+                  <div className="imbd-container">
+                    <img className="card-imbd" src={imbd} />
+                    <div className="card-point"> 8.8</div>
+                  </div>
+                  <div className="card-year">2019</div>
+                  <div className="card-name">The Godfather</div>
+                  <div className="card-detail">
+                    The aging patriarch of an organized crime dynasty transfers
+                    control of his clandestine empire to his reluctant son.
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card">
-              <div>
-                <img className="card-image" src={Godfather} />
-              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div>
+                  <img className="card-image" src={Godfather} />
+                </div>
 
-              <div className="bottom-side">
-                <div className="imbd-container">
-                  <img className="card-imbd" src={imbd} />
-                  <div className="card-point"> 8.8</div>
-                </div>
-                <div className="card-year">2019</div>
-                <div className="card-name">The Godfather</div>
-                <div className="card-detail">
-                  The aging patriarch of an organized crime dynasty transfers
-                  control of his clandestine empire to his reluctant son.
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card">
-              <div>
-                <img className="card-image" src={Godfather} />
-              </div>
-
-              <div className="bottom-side">
-                <div className="imbd-container">
-                  <img className="card-imbd" src={imbd} />
-                  <div className="card-point"> 8.8</div>
-                </div>
-                <div className="card-year">2019</div>
-                <div className="card-name">The Godfather</div>
-                <div className="card-detail">
-                  The aging patriarch of an organized crime dynasty transfers
-                  control of his clandestine empire to his reluctant son.
+                <div className="bottom-side">
+                  <div className="imbd-container">
+                    <img className="card-imbd" src={imbd} />
+                    <div className="card-point"> 8.8</div>
+                  </div>
+                  <div className="card-year">2019</div>
+                  <div className="card-name">The Godfather</div>
+                  <div className="card-detail">
+                    The aging patriarch of an organized crime dynasty transfers
+                    control of his clandestine empire to his reluctant son.
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );
