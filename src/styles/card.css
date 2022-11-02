@@ -1,10 +1,10 @@
 .card {
-  width: 270px;
-  height: 465px;
-  /* border: 2px solid tomato; */
+  width: 6rem;
+  height: 10.5rem;
+  border: 2px solid tomato;
   /* margin-left: 16vw; */
-  margin-top: 5vh;
-  border-radius: 5px;
+  margin-top: 1rem;
+  border-radius: 0.1rem;
 }
 
 .card:hover {
@@ -13,53 +13,59 @@
 }
 
 .card-image {
-  width: 270px;
+  width: 5.9rem;
   height: auto;
-  border-radius: 5px;
+  border-radius: 0.1rem;
 }
 
 .imbd-container {
-  width: 100;
-  height: 18px;
-  border: tomato;
+  width: 1.6rem;
+  height: 0.45rem;
+  /* border: 1px solid tomato; */
   display: flex;
-  margin-top: 8px;
+  margin-top: 0.2rem;
   align-items: center;
 }
 .card-imbd {
-  width: 35px;
-  margin-right: 15px;
+  width: 0.75rem;
+  margin-right: 0.3rem;
 }
 
 .card-point {
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 0.3rem;
 }
 
 .card-year {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 800;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 0.32rem;
+  /* line-height: 30px; */
+  /* border: 1px solid tomato; */
+  color: #f5c518;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.3rem;
 }
 
 .card-name {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
-  line-height: 42px;
+  font-size: 0.45rem;
+  line-height: 1rem;
 }
 
 .card-detail {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 0.25rem;
   color: rgba(0, 0, 0, 0.5);
+  text-align: left;
 }
 
 .bottom-side {
-  padding: 0 5px 5px 5px;
+  padding: 0 0.1rem 0.1rem 0.1rem;
+  /* border: 1px solid tomato; */
 }
