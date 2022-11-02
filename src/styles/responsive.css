@@ -51,5 +51,11 @@ html {
 
   .navigation {
     margin-left: 1rem;
+    width: 3.5rem;
+  }
+
+  .navbar {
+    padding-right: 2rem;
+    /* padding-left: 5.5rem; */
   }
 }
