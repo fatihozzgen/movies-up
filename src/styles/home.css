@@ -36,6 +36,7 @@
 .home-filter {
   position: absolute;
   width: 65%;
+  height: 2rem;
   top: 9.7rem;
   margin-left: 17.5%;
   margin-right: 17.5%;

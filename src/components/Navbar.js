@@ -21,6 +21,7 @@ function Navbar() {
               <div className="button-fav">Favorite</div>
             </Link>
           </div>
+
           <div className="navbar-search">
             <Search />
           </div>

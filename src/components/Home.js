@@ -30,9 +30,9 @@ function Home() {
         <img className="wcircle" src={Circle} />
         <img className="wlorem" src={Lorem} />
       </div>
-      {/* <div className="home-filter">
+      <div className="home-filter">
         <Filter />
-      </div> */}
+      </div>
 
       <div className="popular-text ">
         <img src={Popular} />

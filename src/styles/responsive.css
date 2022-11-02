@@ -2,19 +2,19 @@ html {
   font-size: 3rem;
 }
 
-@media only screen and (max-width: 1299px) {
+@media only screen and (max-width: 1350px) {
   html {
     font-size: 2.5rem;
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1120px) {
   html {
     font-size: 2rem;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   html {
     font-size: 1.4rem;
   }
