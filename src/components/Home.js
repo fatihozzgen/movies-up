@@ -30,9 +30,9 @@ function Home() {
         <img className="wcircle" src={Circle} />
         <img className="wlorem" src={Lorem} />
       </div>
-      <div className="home-filter">
+      {/* <div className="home-filter">
         <Filter />
-      </div>
+      </div> */}
 
       <div className="popular-text ">
         <img src={Popular} />
@@ -41,7 +41,7 @@ function Home() {
         <div className="popular-slider">
           <Swiper
             slidesPerView={4}
-            spaceBetween={-90}
+            spaceBetween={0}
             slidesPerGroup={3}
             loop={true}
             loopFillGroupWithBlank={true}

@@ -14,19 +14,25 @@
   align-items: center;
 }
 
+.movie-img {
+  width: 5rem;
+  margin-left: 0.3rem;
+}
+
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 4rem;
+  width: 3.5rem;
   margin-left: 3rem;
+  /* border: 1px solid tomato; */
 }
 
 .navigation > a {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  font-size: large;
+  font-size: 0.41rem;
 }
 
 .button-fav {
