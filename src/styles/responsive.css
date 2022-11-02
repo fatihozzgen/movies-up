@@ -24,7 +24,7 @@ html {
   }
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   html {
     font-size: 1.1rem;
   }
@@ -32,4 +32,24 @@ html {
   .nav-input > input {
     padding-bottom: 0.3rem;
   }
-} */
+
+  .nav-container {
+    margin-left: 2rem;
+  }
+
+  .wmovieup {
+    margin-left: 2rem;
+  }
+
+  .wcircle {
+    margin-left: 2rem;
+  }
+
+  .wlorem {
+    margin-left: 2rem;
+  }
+
+  .navigation {
+    margin-left: 1rem;
+  }
+}
