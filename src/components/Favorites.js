@@ -20,7 +20,7 @@ function Favorites() {
         <img src={Favorite} />
       </div>
 
-      {/* <div className="card">
+      <div className="card">
         <div>
           <img className="card-image" src={Godfather} />
         </div>
@@ -37,7 +37,7 @@ function Favorites() {
             of his clandestine empire to his reluctant son.
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

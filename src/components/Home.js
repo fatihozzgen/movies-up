@@ -9,16 +9,16 @@ import Popular from "../logo/popular.png";
 import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import "../styles/card.css";
-
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
+// import "./styles.css";
+
+// import required modules
+import { Pagination } from "swiper";
 function Home() {
   return (
     <div className="home">
@@ -40,134 +40,201 @@ function Home() {
       <div className="popular-slider2">
         <div className="popular-slider">
           <Swiper
-            slidesPerView={4}
-            spaceBetween={0}
-            slidesPerGroup={3}
-            loop={true}
-            loopFillGroupWithBlank={true}
+            slidesPerView={1.6}
+            spaceBetween={10}
+            centeredSlides={true}
             pagination={{
               clickable: true,
             }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
+            modules={[Pagination]}
             className="mySwiper"
           >
             <SwiperSlide>
-              <div className="card">
-                <div>
-                  <img className="card-image" src={Godfather} />
+              <div className="populer-card">
+                <div className="popular-img">
+                  <img src={Godfather} />
                 </div>
 
-                <div className="bottom-side">
-                  <div className="imbd-container">
-                    <img className="card-imbd" src={imbd} />
-                    <div className="card-point"> 8.8</div>
+                <div className="right-side">
+                  <div className="right-top-side">
+                    <div className="popular-imbd-container">
+                      <img className="popular-card-imbd" src={imbd} />
+                      <div className="popular-card-point"> 8.8</div>
+                    </div>
+
+                    <div className="popular-buttons-cont">
+                      <button className="filt-btn">Action</button>
+                      <button className="filt-btn">Biography</button>
+                    </div>
                   </div>
-                  <div className="card-year">2019</div>
-                  <div className="card-name">The Godfather</div>
-                  <div className="card-detail">
-                    The aging patriarch of an organized crime dynasty transfers
-                    control of his clandestine empire to his reluctant son.
+
+                  <div className="right-bottom-side">
+                    <div className="popular-card-year">2019</div>
+
+                    <div className="popular-card-name">The Godfather</div>
+
+                    <div className="popular-card-detail">
+                      The aging patriarch of an organized crime dynasty
+                      transfers control of his clandestine empire to his
+                      reluctant son.
+                    </div>
+
+                    <div className="detail-btn">
+                      <button className="fav-btn">Add To favorites</button>
+                      <div>View Details</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card">
-                <div>
-                  <img className="card-image" src={Godfather} />
+              <div className="populer-card">
+                <div className="popular-img">
+                  <img src={Godfather} />
                 </div>
 
-                <div className="bottom-side">
-                  <div className="imbd-container">
-                    <img className="card-imbd" src={imbd} />
-                    <div className="card-point"> 8.8</div>
+                <div className="right-side">
+                  <div className="right-top-side">
+                    <div className="popular-imbd-container">
+                      <img className="popular-card-imbd" src={imbd} />
+                      <div className="popular-card-point"> 8.8</div>
+                    </div>
+
+                    <div className="popular-buttons-cont">
+                      <button className="filt-btn">Action</button>
+                      <button className="filt-btn">Biography</button>
+                    </div>
                   </div>
-                  <div className="card-year">2019</div>
-                  <div className="card-name">The Godfather</div>
-                  <div className="card-detail">
-                    The aging patriarch of an organized crime dynasty transfers
-                    control of his clandestine empire to his reluctant son.
+
+                  <div className="right-bottom-side">
+                    <div className="popular-card-year">2019</div>
+
+                    <div className="popular-card-name">The Godfather</div>
+
+                    <div className="popular-card-detail">
+                      The aging patriarch of an organized crime dynasty
+                      transfers control of his clandestine empire to his
+                      reluctant son.
+                    </div>
+
+                    <div className="detail-btn">
+                      <button className="fav-btn">Add To favorites</button>
+                      <div>View Details</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card">
-                <div>
-                  <img className="card-image" src={Godfather} />
+              <div className="populer-card">
+                <div className="popular-img">
+                  <img src={Godfather} />
                 </div>
 
-                <div className="bottom-side">
-                  <div className="imbd-container">
-                    <img className="card-imbd" src={imbd} />
-                    <div className="card-point"> 8.8</div>
+                <div className="right-side">
+                  <div className="right-top-side">
+                    <div className="popular-imbd-container">
+                      <img className="popular-card-imbd" src={imbd} />
+                      <div className="popular-card-point"> 8.8</div>
+                    </div>
+
+                    <div className="popular-buttons-cont">
+                      <button className="filt-btn">Action</button>
+                      <button className="filt-btn">Biography</button>
+                    </div>
                   </div>
-                  <div className="card-year">2019</div>
-                  <div className="card-name">The Godfather</div>
-                  <div className="card-detail">
-                    The aging patriarch of an organized crime dynasty transfers
-                    control of his clandestine empire to his reluctant son.
+
+                  <div className="right-bottom-side">
+                    <div className="popular-card-year">2019</div>
+
+                    <div className="popular-card-name">The Godfather</div>
+
+                    <div className="popular-card-detail">
+                      The aging patriarch of an organized crime dynasty
+                      transfers control of his clandestine empire to his
+                      reluctant son.
+                    </div>
+
+                    <div className="detail-btn">
+                      <button className="fav-btn">Add To favorites</button>
+                      <div>View Details</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card">
-                <div>
-                  <img className="card-image" src={Godfather} />
+              <div className="populer-card">
+                <div className="popular-img">
+                  <img src={Godfather} />
                 </div>
 
-                <div className="bottom-side">
-                  <div className="imbd-container">
-                    <img className="card-imbd" src={imbd} />
-                    <div className="card-point"> 8.8</div>
+                <div className="right-side">
+                  <div className="right-top-side">
+                    <div className="popular-imbd-container">
+                      <img className="popular-card-imbd" src={imbd} />
+                      <div className="popular-card-point"> 8.8</div>
+                    </div>
+
+                    <div className="popular-buttons-cont">
+                      <button className="filt-btn">Action</button>
+                      <button className="filt-btn">Biography</button>
+                    </div>
                   </div>
-                  <div className="card-year">2019</div>
-                  <div className="card-name">The Godfather</div>
-                  <div className="card-detail">
-                    The aging patriarch of an organized crime dynasty transfers
-                    control of his clandestine empire to his reluctant son.
+
+                  <div className="right-bottom-side">
+                    <div className="popular-card-year">2019</div>
+
+                    <div className="popular-card-name">The Godfather</div>
+
+                    <div className="popular-card-detail">
+                      The aging patriarch of an organized crime dynasty
+                      transfers control of his clandestine empire to his
+                      reluctant son.
+                    </div>
+
+                    <div className="detail-btn">
+                      <button className="fav-btn">Add To favorites</button>
+                      <div>View Details</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card">
-                <div>
-                  <img className="card-image" src={Godfather} />
+              <div className="populer-card">
+                <div className="popular-img">
+                  <img src={Godfather} />
                 </div>
 
-                <div className="bottom-side">
-                  <div className="imbd-container">
-                    <img className="card-imbd" src={imbd} />
-                    <div className="card-point"> 8.8</div>
-                  </div>
-                  <div className="card-year">2019</div>
-                  <div className="card-name">The Godfather</div>
-                  <div className="card-detail">
-                    The aging patriarch of an organized crime dynasty transfers
-                    control of his clandestine empire to his reluctant son.
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card">
-                <div>
-                  <img className="card-image" src={Godfather} />
-                </div>
+                <div className="right-side">
+                  <div className="right-top-side">
+                    <div className="popular-imbd-container">
+                      <img className="popular-card-imbd" src={imbd} />
+                      <div className="popular-card-point"> 8.8</div>
+                    </div>
 
-                <div className="bottom-side">
-                  <div className="imbd-container">
-                    <img className="card-imbd" src={imbd} />
-                    <div className="card-point"> 8.8</div>
+                    <div className="popular-buttons-cont">
+                      <button className="filt-btn">Action</button>
+                      <button className="filt-btn">Biography</button>
+                    </div>
                   </div>
-                  <div className="card-year">2019</div>
-                  <div className="card-name">The Godfather</div>
-                  <div className="card-detail">
-                    The aging patriarch of an organized crime dynasty transfers
-                    control of his clandestine empire to his reluctant son.
+
+                  <div className="right-bottom-side">
+                    <div className="popular-card-year">2019</div>
+
+                    <div className="popular-card-name">The Godfather</div>
+
+                    <div className="popular-card-detail">
+                      The aging patriarch of an organized crime dynasty
+                      transfers control of his clandestine empire to his
+                      reluctant son.
+                    </div>
+
+                    <div className="detail-btn">
+                      <button className="fav-btn">Add To favorites</button>
+                      <div>View Details</div>
+                    </div>
                   </div>
                 </div>
               </div>
