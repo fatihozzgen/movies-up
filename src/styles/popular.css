@@ -78,6 +78,7 @@
 
 .detail-btn > div {
   color: #f5c518;
+  font-size: 0.3rem;
 }
 
 .fav-btn {
@@ -106,4 +107,8 @@
   color: rgba(0, 0, 0, 0.5);
   margin-top: 0.4rem;
   font-size: 0.4rem;
+}
+
+.fav-btn {
+  font-size: 0.25rem;
 }

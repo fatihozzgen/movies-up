@@ -195,7 +195,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">Add To favorites</button>
-                      <div>View Details</div>
+                      <div className="vw-details">View Details</div>
                     </div>
                   </div>
                 </div>
