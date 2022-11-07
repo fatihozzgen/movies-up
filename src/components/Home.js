@@ -10,7 +10,7 @@ import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import "../styles/card.css";
 
-import { Heart } from "phosphor-react";
+import { BsFillHeartFill } from "react-icons/bs";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -82,7 +82,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>
@@ -123,7 +123,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>
@@ -164,7 +164,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>
@@ -205,7 +205,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>
@@ -246,7 +246,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>
@@ -287,7 +287,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>
@@ -328,7 +328,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>
@@ -369,7 +369,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>
@@ -410,7 +410,7 @@ function Home() {
 
                     <div className="detail-btn">
                       <button className="fav-btn">
-                        <Heart size={22} />
+                        <BsFillHeartFill />
                         Add To favorites
                       </button>
                       <div>View Details</div>

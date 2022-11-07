@@ -138,4 +138,8 @@ html {
     border-radius: 0.1rem;
     font-size: 0.2rem;
   }
+
+  .popular-text {
+    padding-left: 2.2rem;
+  }
 }
