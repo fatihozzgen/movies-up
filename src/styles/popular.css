@@ -117,5 +117,9 @@
 }
 
 .swiper-pagination-bullet {
-  display: none !important;
+  /* display: none !important; */
+  background-color: #f5c518 !important;
+  border-radius: 0 !important;
+  width: 0.5rem !important;
+  height: 0.1rem !important;
 }
