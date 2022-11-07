@@ -422,7 +422,7 @@ function Home() {
           </Swiper>
         </div>
       </div>
-      <div className="card">
+      {/* <div className="card">
         <div>
           <img className="card-image" src={Godfather} />
         </div>
@@ -475,7 +475,7 @@ function Home() {
             of his clandestine empire to his reluctant son.
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
