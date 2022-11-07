@@ -25,9 +25,10 @@ a {
 }
 
 .fav-text {
-  width: 100%;
+  width: 50%;
+  /* border: 1px solid tomato; */
   margin-left: 5.5rem;
-  margin-top: 5vh;
+  margin-top: 0.4rem;
 }
 
 .fav-text > img {
