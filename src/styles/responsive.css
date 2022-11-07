@@ -66,4 +66,13 @@ html {
   .fav-home-btn {
     margin-left: 2.2rem;
   }
+
+  .filt-btn {
+    /* border: 1px solid tomato; */
+    width: 40%;
+  }
+
+  .detail-btn > div {
+    width: 2rem;
+  }
 }
