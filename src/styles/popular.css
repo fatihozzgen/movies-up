@@ -115,3 +115,7 @@
 .fav-btn {
   font-size: 0.25rem;
 }
+
+.swiper-pagination-bullet {
+  display: none !important;
+}
