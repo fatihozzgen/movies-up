@@ -10,6 +10,8 @@ import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import "../styles/card.css";
 
+import { Heart } from "phosphor-react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -79,7 +81,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>
@@ -117,7 +122,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>
@@ -155,7 +163,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>
@@ -193,7 +204,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>
@@ -231,7 +245,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>
@@ -269,7 +286,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>
@@ -307,7 +327,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>
@@ -345,7 +368,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>
@@ -383,7 +409,10 @@ function Home() {
                     </div>
 
                     <div className="detail-btn">
-                      <button className="fav-btn">Add To favorites</button>
+                      <button className="fav-btn">
+                        <Heart size={22} />
+                        Add To favorites
+                      </button>
                       <div>View Details</div>
                     </div>
                   </div>

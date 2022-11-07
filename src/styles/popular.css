@@ -82,13 +82,20 @@
 }
 
 .fav-btn {
-  width: 2.7rem;
+  width: 2.5rem;
   height: 0.8rem;
   background-color: #f5c518;
   color: whitesmoke;
-  padding-left: 0.7rem;
   border: none;
   border-radius: 0.1rem;
+  font-size: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.fav-btn > svg {
+  width: 0.4rem !important;
 }
 
 .popular-card-year {
@@ -110,10 +117,6 @@
   margin-top: 0.4rem;
   font-size: 0.25rem;
   font-family: "Merriweather", serif;
-}
-
-.fav-btn {
-  font-size: 0.25rem;
 }
 
 .swiper-pagination-bullet {
