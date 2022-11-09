@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { mainContext } from "../context";
@@ -7,8 +7,9 @@ import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 
 function Results() {
-  const { search, setSearch, result, setResult, text } =
+  const { search, setSearch, result, setResult, text, popular, setPopular } =
     useContext(mainContext);
+
   return (
     <div>
       <div className="line-background">
@@ -19,7 +20,7 @@ function Results() {
       </div>
       <div className="fav-text">Search result {text}</div>
 
-      <div className="result-container">
+      {/* <div className="result-container">
         {result?.Search?.map((res) => (
           <div className="card">
             <div>
@@ -40,7 +41,7 @@ function Results() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

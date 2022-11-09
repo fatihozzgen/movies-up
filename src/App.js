@@ -15,10 +15,13 @@ import "./styles/popular.css";
 import "swiper/css/bundle";
 import { useState } from "react";
 
+export const Img = "https://image.tmdb.org/t/p/w500/";
+
 function App() {
   const [search, setSearch] = useState("");
   const [result, setResult] = useState();
   const [text, setText] = useState();
+  const [popular, setPopular] = useState();
 
   const datax = {
     search,
@@ -27,6 +30,8 @@ function App() {
     setResult,
     text,
     setText,
+    popular,
+    setPopular,
   };
 
   return (
