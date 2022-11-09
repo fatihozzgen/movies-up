@@ -8,8 +8,6 @@ function Favorites() {
   return (
     <div>
       <div className="line-background">
-        {/* <img src={Line} /> */}
-
         <Link to="/">
           <div className="fav-home-btn">Home /</div>
         </Link>

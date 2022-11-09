@@ -8,18 +8,17 @@ import Circle from "../logo/circle.png";
 import Lorem from "../logo/lorem.png";
 import Filter from "./Filter";
 import Popular from "../logo/popular.png";
-import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import "../styles/card.css";
 import { Img } from "../App";
+import Search from "./Search";
 
 import { BsFillHeartFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-import Search from "./Search";
 
 function Home() {
   const { search, setSearch, result, setResult, popular } =
