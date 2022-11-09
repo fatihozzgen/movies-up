@@ -13,7 +13,7 @@
 }
 
 .card-image {
-  width: 5.9rem;
+  width: 4rem;
   height: auto;
   border-radius: 0.1rem;
 }
@@ -54,8 +54,9 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 0.45rem;
-  line-height: 1rem;
+  font-size: 0.35rem;
+  /* line-height: 1rem; */
+  /* color: red; */
 }
 
 .card-detail {
@@ -68,4 +69,15 @@
 .bottom-side {
   padding: 0 0.1rem 0.1rem 0.1rem;
   /* border: 1px solid tomato; */
+}
+
+.result-container {
+  border: 2px solid tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
 }

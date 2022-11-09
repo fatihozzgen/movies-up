@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Search from "./Search";
 
 function Filter() {
@@ -18,7 +18,10 @@ function Filter() {
         </div>
 
         <div className="filter-search">
-          <Search />
+          <Search
+            filterSearch={filterSearch}
+            setFilterSearch={setFilterSearch}
+          />
         </div>
 
         <div className="filter-button">

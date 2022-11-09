@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { mainContext, useContext } from "../context";
+import axios from "axios";
 import People from "../logo/people.png";
 import Yellow from "../logo/yellow.png";
 import Movieup from "../logo/wmovieup.png";
@@ -8,21 +10,24 @@ import Filter from "./Filter";
 import Popular from "../logo/popular.png";
 import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
+import { trim } from "../trim";
 import "../styles/card.css";
 
 import { BsFillHeartFill } from "react-icons/bs";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
-// import "./styles.css";
-
-// import required modules
 import { Pagination } from "swiper";
+import Search from "./Search";
+
 function Home() {
+  const { search, setSearch, result, setResult } = useContext(mainContext);
+  console.log(result);
+
+  // let title = result?.Search?.map((res) => res.Title);
+
+  // console.log(title);
+
   return (
     <div className="home">
       <div className="welcome">
@@ -422,60 +427,6 @@ function Home() {
           </Swiper>
         </div>
       </div>
-      {/* <div className="card">
-        <div>
-          <img className="card-image" src={Godfather} />
-        </div>
-
-        <div className="bottom-side">
-          <div className="imbd-container">
-            <img className="card-imbd" src={imbd} />
-            <div className="card-point"> 8.8</div>
-          </div>
-          <div className="card-year">2019</div>
-          <div className="card-name">The Godfather</div>
-          <div className="card-detail">
-            The aging patriarch of an organized crime dynasty transfers control
-            of his clandestine empire to his reluctant son.
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <div>
-          <img className="card-image" src={Godfather} />
-        </div>
-
-        <div className="bottom-side">
-          <div className="imbd-container">
-            <img className="card-imbd" src={imbd} />
-            <div className="card-point"> 8.8</div>
-          </div>
-          <div className="card-year">2019</div>
-          <div className="card-name">The Godfather</div>
-          <div className="card-detail">
-            The aging patriarch of an organized crime dynasty transfers control
-            of his clandestine empire to his reluctant son.
-          </div>
-        </div>
-      </div>{" "}
-      <div className="card">
-        <div>
-          <img className="card-image" src={Godfather} />
-        </div>
-
-        <div className="bottom-side">
-          <div className="imbd-container">
-            <img className="card-imbd" src={imbd} />
-            <div className="card-point"> 8.8</div>
-          </div>
-          <div className="card-year">2019</div>
-          <div className="card-name">The Godfather</div>
-          <div className="card-detail">
-            The aging patriarch of an organized crime dynasty transfers control
-            of his clandestine empire to his reluctant son.
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
