@@ -52,7 +52,7 @@ function Home() {
             className="mySwiper"
           >
             {popular?.results?.map((res) => (
-              <SwiperSlide>
+              <SwiperSlide key={res.id}>
                 <div className="populer-card">
                   <div className="popular-img">
                     <img src={Img + res.poster_path} />

@@ -23,23 +23,23 @@ function Search() {
     e.preventDefault();
     setText(search);
     setSearch("");
-    res();
     navigate("/results");
+    res();
   };
 
   const res = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/trending/all/week?api_key=d9b8b0e16bb5b39ca47b17702d4fd301&language=en-US&language=en-US`
+        `https://api.themoviedb.org/3/search/movie?api_key=bcc4ff10c2939665232d75d8bf0ec093&query=${search}`
       )
-      .then((res) => setPopular(res.data));
+      .then((res) => setResult(res.data));
   };
 
-  useEffect(() => {
-    res();
-  }, []);
+  // useEffect(() => {
+  //   res();
+  // }, []);
 
-  console.log(popular);
+  console.log(result);
 
   return (
     <form className="nav-input" onSubmit={handleSearch}>

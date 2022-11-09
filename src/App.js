@@ -14,6 +14,7 @@ import "./styles/popular.css";
 
 import "swiper/css/bundle";
 import { useState } from "react";
+import { Fetch } from "./components/Fetch";
 
 export const Img = "https://image.tmdb.org/t/p/w500/";
 
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <mainContext.Provider value={datax}>
+      <Fetch />
       <BrowserRouter>
         <Navbar />
         <Routes>

@@ -5,6 +5,7 @@ import { mainContext } from "../context";
 import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
+import { Img } from "../App";
 
 function Results() {
   const { search, setSearch, result, setResult, text, popular, setPopular } =
@@ -20,11 +21,11 @@ function Results() {
       </div>
       <div className="fav-text">Search result {text}</div>
 
-      {/* <div className="result-container">
-        {result?.Search?.map((res) => (
+      <div className="result-container">
+        {result?.results?.map((res) => (
           <div className="card">
             <div>
-              <img className="card-image" src={res?.Poster} />
+              <img className="card-image" src={Img + res.poster_path} />
             </div>
 
             <div className="bottom-side">
@@ -32,8 +33,8 @@ function Results() {
                 <img className="card-imbd" src={imbd} />
                 <div className="card-point"> 8.8</div>
               </div>
-              <div className="card-year">{res?.Year}</div>
-              <div className="card-name">{trim(res?.Title, 30)}</div>
+              {/* <div className="card-year">{res?.Year}</div> */}
+              <div className="card-name">{trim(res?.title, 30)}</div>
               <div className="card-detail">
                 The aging patriarch of an organized crime dynasty transfers
                 control of his clandestine empire to his reluctant son.
@@ -41,7 +42,7 @@ function Results() {
             </div>
           </div>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }
