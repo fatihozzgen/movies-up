@@ -75,7 +75,7 @@ function Home() {
                       <div className="popular-card-year">2019</div>
 
                       <div className="popular-card-name">
-                        {trim(res.title || res.name, 30)}
+                        {trim(res.title || res.name, 23)}
                       </div>
 
                       <div className="popular-card-detail">
