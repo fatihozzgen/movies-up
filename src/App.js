@@ -11,6 +11,7 @@ import "./styles/filter.css";
 import "./styles/search.css";
 import "./styles/favorites.css";
 import "./styles/popular.css";
+import "./styles/result.css";
 
 import "swiper/css/bundle";
 import { useState } from "react";

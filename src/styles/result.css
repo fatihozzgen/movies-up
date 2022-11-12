@@ -1,0 +1,28 @@
+.fav-home-btn {
+  width: 1.5rem;
+  margin-left: 5.5rem;
+  font-weight: 600;
+  color: #f9ca24;
+  font-size: large;
+  /* border: 1px solid tomato; */
+  font-size: 0.35rem;
+}
+
+.fav-text {
+  width: 50%;
+  margin-left: 5.5rem;
+  color: black;
+  margin-top: 0.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.55rem;
+}
+
+.fav-text > span {
+  color: #f9ca24;
+}
+
+.fav-text > img {
+  width: 3rem;
+}

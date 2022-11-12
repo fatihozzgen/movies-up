@@ -19,7 +19,9 @@ function Results() {
         </Link>
         <div> Search results </div>
       </div>
-      <div className="fav-text">Search result {text}</div>
+      <div className="fav-text">
+        Search result <span>{text}</span>
+      </div>
 
       <div className="result-container">
         {result?.results?.map((res) => (
