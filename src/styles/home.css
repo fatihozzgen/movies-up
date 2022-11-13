@@ -1,7 +1,6 @@
 .welcome {
   width: 100%;
   height: 9rem;
-  /* border: 2px solid tomato; */
 }
 
 .welcome > .wbackground {
@@ -40,12 +39,9 @@
   top: 9.7rem;
   margin-left: 17.5%;
   margin-right: 17.5%;
-
-  /* border: 1px solid tomato; */
 }
 
 .popular-text {
-  /* border: 1px solid tomato; */
   margin-top: 2rem;
   padding-left: 6rem;
 }
@@ -54,19 +50,13 @@
 }
 
 .popular-slider {
-  /* border: 1px solid tomato; */
   width: 100%;
-  /* margin-left: 9.5%; */
-  /* margin-right: 9.5%; */
   mask-image: linear-gradient(to right, transparent -5%, black 25%);
-  /* mask-image: linear-gradient(to left, black, transparent); */
-  /* mask-image: linear-gradient(to right, black, transparent); */
 }
 
 .popular-slider2 {
   width: 100%;
   mask-image: linear-gradient(to left, transparent -5%, black 25%);
-  /* border: 1px solid tomato; */
 }
 
 .swiper {
@@ -77,10 +67,8 @@
 .swiper-slide {
   text-align: center;
   background: #fff;
-  /* width: 11rem !important; */
   height: 7rem !important;
   padding-left: 0.1rem;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -93,7 +81,6 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  /* border: 1px solid green; */
   padding-bottom: 1rem !important;
 }
 

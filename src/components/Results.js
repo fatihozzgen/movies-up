@@ -6,6 +6,7 @@ import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import { Img } from "../App";
+import { AiOutlineHeart } from "react-icons/ai";
 
 function Results() {
   const { search, setSearch, result, setResult, text, popular, setPopular } =
@@ -26,8 +27,11 @@ function Results() {
       <div className="result-container">
         {result?.results?.map((res) => (
           <div className="card">
-            <div>
+            <div className="img-container">
               <img className="card-image" src={Img + res.poster_path} />
+              <div className="card-heart">
+                <AiOutlineHeart />
+              </div>
             </div>
 
             <div className="bottom-side">

@@ -35,10 +35,6 @@ function Search() {
       .then((res) => setResult(res.data));
   };
 
-  // useEffect(() => {
-  //   res();
-  // }, []);
-
   console.log(result);
 
   return (

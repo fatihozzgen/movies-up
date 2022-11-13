@@ -1,27 +1,19 @@
 .card {
   width: 6rem;
   height: 12rem;
-  /* border: 2px solid tomato; */
-  /* margin-left: 16vw; */
   margin-top: 1rem;
   border-radius: 0.1rem;
-}
-
-.card:hover {
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-out;
 }
 
 .card-image {
   width: 100%;
   height: auto;
-  border-radius: 0.1rem;
+  border-radius: 0.35rem;
 }
 
 .imbd-container {
   width: 1.6rem;
   height: 0.45rem;
-  /* border: 1px solid tomato; */
   display: flex;
   margin-top: 0.2rem;
   align-items: center;
@@ -38,12 +30,9 @@
 }
 
 .card-year {
-  font-family: "Poppins";
-  font-style: normal;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 0.32rem;
-  /* line-height: 30px; */
-  /* border: 1px solid tomato; */
   color: #f5c518;
   display: flex;
   justify-content: flex-start;
@@ -51,12 +40,11 @@
 }
 
 .card-name {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 0.35rem;
-  /* line-height: 1rem; */
-  /* color: red; */
 }
 
 .card-detail {
@@ -64,15 +52,34 @@
   font-size: 0.25rem;
   color: rgba(0, 0, 0, 0.5);
   text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.img-container {
+  position: relative;
+}
+
+.card-heart {
+  width: 30px;
+  height: 30px;
+  color: #f5c518;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  font-size: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  cursor: pointer;
 }
 
 .bottom-side {
   padding: 0 0.1rem 0.1rem 0.1rem;
-  /* border: 1px solid tomato; */
 }
 
 .result-container {
-  /* border: 2px solid tomato; */
   display: flex;
   align-items: center;
   justify-content: center;

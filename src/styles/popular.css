@@ -45,7 +45,6 @@
 }
 
 .filt-btn {
-  /* border: 1px solid tomato; */
   width: 30%;
   height: 0.7rem;
   background-color: #f5c518;
@@ -98,11 +97,6 @@
   font-size: 0.35rem;
 }
 
-/* .hearticon {
-  border: 1px solid tomato;
-  width: 30px;
-} */
-
 .popular-card-year {
   font-weight: bold;
   color: #f5c518;
@@ -125,7 +119,6 @@
 }
 
 .swiper-pagination-bullet {
-  /* display: none !important; */
   background-color: #f5c518 !important;
   border-radius: 0 !important;
   width: 0.5rem !important;
