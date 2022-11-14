@@ -12,10 +12,12 @@ import "./styles/search.css";
 import "./styles/favorites.css";
 import "./styles/popular.css";
 import "./styles/result.css";
+import "./styles/detail.css";
 
 import "swiper/css/bundle";
 import { useState } from "react";
 import { Fetch } from "./components/Fetch";
+import Detail from "./components/Detail";
 
 export const Img = "https://image.tmdb.org/t/p/w500/";
 
@@ -43,8 +45,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/favorite" element={<Favorites />} />
-          <Route path="/results" element={<Results />} />
+          <Route path="favorite" element={<Favorites />} />
+          <Route path="results" element={<Results />} />
+          <Route path="results/:id" element={<Detail />} />
         </Routes>
       </BrowserRouter>
     </mainContext.Provider>

@@ -25,4 +25,5 @@ export const Fetch = () => {
       )
       .then((res) => setPopular(res.data));
   };
+  console.log(popular);
 };

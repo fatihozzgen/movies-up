@@ -1,0 +1,82 @@
+.detail-card {
+  /* border: 2px solid tomato; */
+  width: 70%;
+  height: 9rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.detail-popular-img > img {
+  width: 5rem;
+  border-radius: 0.3rem;
+}
+
+.detail-right-side {
+  width: 75%;
+  height: 70%;
+  margin-left: 0.4rem;
+  /* border: 1px solid green; */
+}
+
+.detail-right-top-side {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid gray; */
+}
+
+.detail-imbd {
+  margin-right: 0.2rem;
+  display: flex;
+  /* border: 1px solid green; */
+  font-weight: bold;
+  font-size: 0.28rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.detail-imbd > img {
+  width: 0.9rem;
+  margin-right: 0.3rem;
+}
+
+.detail-right-bottom-side {
+  width: 100%;
+  height: 85%;
+  /* border: 1px solid black; */
+}
+
+.detail-card-year {
+  font-weight: bold;
+  color: #f5c518;
+  margin-top: 0.2rem;
+  font-size: 0.35rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.detail-card-name {
+  font-weight: 600;
+  font-size: 0.6rem;
+  font-family: "Roboto Slab", serif;
+  margin-top: 0.2rem;
+}
+
+.detail-card-detail {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.33rem;
+  font-family: "Merriweather", serif;
+  margin-top: 0.1rem;
+}
+
+.detail-buttons-cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* border: 1px solid tomato; */
+  margin-top: 9%;
+}

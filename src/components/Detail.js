@@ -1,45 +1,77 @@
-import React, { useEffect } from "react";
-import { mainContext, useContext } from "../context";
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import People from "../logo/people.png";
-import Yellow from "../logo/yellow.png";
-import Movieup from "../logo/wmovieup.png";
-import Circle from "../logo/circle.png";
-import Lorem from "../logo/lorem.png";
-import Filter from "./Filter";
-import Popular from "../logo/popular.png";
+import { Img } from "../App";
 import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
-import "../styles/card.css";
-import { Img } from "../App";
-import Search from "./Search";
+import { mainContext, useContext } from "../context";
 
 import { BsFillHeartFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
 import { Pagination } from "swiper";
-import { Link } from "react-router-dom";
 
-function Home() {
-  const { search, setSearch, result, setResult, popular } =
-    useContext(mainContext);
+function Detail() {
+  const { popular } = useContext(mainContext);
+  const [detail, setDetail] = useState(null);
+
+  const { id } = useParams();
+
+  const res = async () => {
+    await axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
+      )
+      .then((res) => setDetail(res.data));
+  };
+
+  useEffect(() => {
+    res();
+  }, [id]);
+
+  console.log(detail);
 
   return (
-    <div className="home">
-      <div className="welcome">
-        <img className="wbackground" src={People} />
-        <img className="wbackground" src={Yellow} />
+    <>
+      <div className="line-background">
+        <Link to="/">
+          <div className="fav-home-btn">Home /</div>
+        </Link>
+        <div> {detail?.title}</div>
+      </div>
 
-        <img className="wmovieup  " src={Movieup} />
-        <img className="wcircle" src={Circle} />
-        <img className="wlorem" src={Lorem} />
-      </div>
-      <div className="home-filter">
-        <Filter />
-      </div>
-      <div className="popular-text ">
-        <img src={Popular} />
+      <div className="detail-card">
+        <div className="detail-popular-img">
+          <img src={Img + detail?.poster_path} />
+        </div>
+
+        <div className="detail-right-side">
+          <div className="detail-right-top-side">
+            <div className="detail-imbd">
+              <img src={imbd} />
+              <div>{Math.round(detail?.vote_average)}</div>
+            </div>
+            {/* <button className="fav-btn">Trailer</button> */}
+            <button className="fav-btn">
+              <BsFillHeartFill />
+              Add To favorites
+            </button>
+          </div>
+
+          <div className="detail-right-bottom-side">
+            <div className="detail-card-year">
+              {detail?.release_date.slice(0, 4)}
+            </div>
+
+            <div className="detail-card-name">{detail?.title}</div>
+
+            <div className="detail-card-detail">{detail?.overview} </div>
+
+            <div className="detail-buttons-cont">
+              <button className="filt-btn">{detail?.genres[0].name}</button>
+              <button className="filt-btn">{detail?.genres[1].name}</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="popular-slider2">
         <div className="popular-slider">
@@ -103,8 +135,8 @@ function Home() {
           </Swiper>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
-export default Home;
+export default Detail;
