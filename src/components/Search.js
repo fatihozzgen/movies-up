@@ -35,8 +35,6 @@ function Search() {
       .then((res) => setResult(res.data));
   };
 
-  console.log(result);
-
   return (
     <form className="nav-input" onSubmit={handleSearch}>
       <input

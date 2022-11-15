@@ -7,16 +7,7 @@ export const Fetch = () => {
     res();
   }, []);
 
-  const {
-    search,
-    setSearch,
-    result,
-    setResult,
-    text,
-    setText,
-    popular,
-    setPopular,
-  } = useContext(mainContext);
+  const { popular, setPopular } = useContext(mainContext);
 
   const res = async () => {
     await axios
@@ -25,5 +16,4 @@ export const Fetch = () => {
       )
       .then((res) => setPopular(res.data));
   };
-  console.log(popular);
 };

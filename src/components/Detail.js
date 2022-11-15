@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
 function Detail() {
-  const { popular } = useContext(mainContext);
+  const { popular, similar, setSimilar } = useContext(mainContext);
   const [detail, setDetail] = useState(null);
 
   const { id } = useParams();
@@ -26,9 +26,17 @@ function Detail() {
 
   useEffect(() => {
     res();
+    sim();
   }, [id]);
 
-  console.log(detail);
+  const sim = async () => {
+    await axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${id}/similar?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US&page=1`
+      )
+      .then((sim) => setSimilar(sim.data));
+  };
+  console.log(similar);
 
   return (
     <>
@@ -48,7 +56,10 @@ function Detail() {
           <div className="detail-right-top-side">
             <div className="detail-imbd">
               <img src={imbd} />
-              <div>{Math.round(detail?.vote_average)}</div>
+              <div>
+                {Math.round(detail?.vote_average)}
+                {/* {detail?.vote_average.splice(0, 4)} */}
+              </div>
             </div>
             {/* <button className="fav-btn">Trailer</button> */}
             <button className="fav-btn">
@@ -84,7 +95,7 @@ function Detail() {
             modules={[Pagination]}
             className="mySwiper"
           >
-            {popular?.results?.map((res) => (
+            {similar?.results?.map((res) => (
               <SwiperSlide key={res.id}>
                 <div className="populer-card">
                   <div className="popular-img">
@@ -106,8 +117,8 @@ function Detail() {
 
                     <div className="right-bottom-side">
                       <div className="popular-card-year">
-                        {/* {res?.release_date?.slice(0, 4)} */}
-                        2022
+                        {res?.release_date?.slice(0, 4)}
+                        {/* 2022 */}
                       </div>
 
                       <div className="popular-card-name">
@@ -123,7 +134,7 @@ function Detail() {
                           <BsFillHeartFill />
                           Add To favorites
                         </button>
-                        <Link to={`results/${res.id}`}>
+                        <Link to={`/${res.id}`}>
                           <div>View Details</div>
                         </Link>
                       </div>

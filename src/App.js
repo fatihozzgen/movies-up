@@ -26,6 +26,7 @@ function App() {
   const [result, setResult] = useState();
   const [text, setText] = useState();
   const [popular, setPopular] = useState();
+  const [similar, setSimilar] = useState();
 
   const datax = {
     search,
@@ -36,6 +37,8 @@ function App() {
     setText,
     popular,
     setPopular,
+    similar,
+    setSimilar,
   };
 
   return (
@@ -47,7 +50,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="favorite" element={<Favorites />} />
           <Route path="results" element={<Results />} />
-          <Route path="results/:id" element={<Detail />} />
+          <Route path=":id" element={<Detail />} />
         </Routes>
       </BrowserRouter>
     </mainContext.Provider>

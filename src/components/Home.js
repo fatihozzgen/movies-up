@@ -74,8 +74,8 @@ function Home() {
 
                     <div className="right-bottom-side">
                       <div className="popular-card-year">
-                        {/* {res?.release_date?.slice(0, 4)} */}
-                        2022
+                        {res?.release_date?.slice(0, 4) || 2021}
+                        {/* 2022 */}
                       </div>
 
                       <div className="popular-card-name">
@@ -91,7 +91,7 @@ function Home() {
                           <BsFillHeartFill />
                           Add To favorites
                         </button>
-                        <Link to={`results/${res.id}`}>
+                        <Link to={`${res.id}`}>
                           <div>View Details</div>
                         </Link>
                       </div>

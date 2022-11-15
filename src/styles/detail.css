@@ -2,11 +2,10 @@
   /* border: 2px solid tomato; */
   width: 70%;
   height: 9rem;
-  margin-left: 15%;
-  margin-right: 15%;
   margin-top: 1rem;
   display: flex;
   align-items: center;
+  margin: 1rem 15% 1rem 15%;
 }
 
 .detail-popular-img > img {
