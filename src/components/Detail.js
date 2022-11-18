@@ -5,13 +5,15 @@ import { Img } from "../App";
 import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import { mainContext, useContext } from "../context";
+import notFound from "../logo/image404.jpg";
 
 import { BsFillHeartFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
 function Detail() {
-  const { popular, similar, setSimilar } = useContext(mainContext);
+  const { popular, similar, setSimilar, setFavorite, favorite } =
+    useContext(mainContext);
   const [detail, setDetail] = useState(null);
 
   const { id } = useParams();
@@ -22,6 +24,18 @@ function Detail() {
         `https://api.themoviedb.org/3/movie/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
       )
       .then((res) => setDetail(res.data));
+  };
+
+  const handleFavorite = (res) => {
+    setFavorite([
+      ...favorite.filter((item) => item.id !== res.id),
+      {
+        id: res.id,
+        name: res.title || res.name,
+        poster: res.poster_path,
+        detail: res.overview,
+      },
+    ]);
   };
 
   useEffect(() => {
@@ -36,7 +50,7 @@ function Detail() {
       )
       .then((sim) => setSimilar(sim.data));
   };
-  console.log(similar);
+  console.log(detail);
 
   return (
     <>
@@ -49,7 +63,13 @@ function Detail() {
 
       <div className="detail-card">
         <div className="detail-popular-img">
-          <img src={Img + detail?.poster_path} />
+          <img
+            src={
+              detail?.poster_path === null
+                ? notFound
+                : Img + detail?.poster_path
+            }
+          />
         </div>
 
         <div className="detail-right-side">
@@ -76,10 +96,12 @@ function Detail() {
             <div className="detail-card-name">{detail?.title}</div>
 
             <div className="detail-card-detail">{detail?.overview} </div>
-
             <div className="detail-buttons-cont">
-              <button className="filt-btn">{detail?.genres[0].name}</button>
-              <button className="filt-btn">{detail?.genres[1].name}</button>
+              {detail?.genres?.map((item, i) => (
+                <button key={i} className="filt-btn">
+                  {item?.name}
+                </button>
+              ))}
             </div>
           </div>
         </div>
@@ -130,7 +152,10 @@ function Detail() {
                       </div>
 
                       <div className="detail-btn">
-                        <button className="fav-btn">
+                        <button
+                          className="fav-btn"
+                          onClick={() => handleFavorite(res)}
+                        >
                           <BsFillHeartFill />
                           Add To favorites
                         </button>

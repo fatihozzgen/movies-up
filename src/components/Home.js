@@ -22,8 +22,28 @@ import { Pagination } from "swiper";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const { search, setSearch, result, setResult, popular } =
-    useContext(mainContext);
+  const {
+    search,
+    setSearch,
+    result,
+    setResult,
+    popular,
+    favorite,
+    setFavorite,
+  } = useContext(mainContext);
+
+  const handleFavorite = (res) => {
+    setFavorite([
+      ...favorite.filter((item) => item.id !== res.id),
+      {
+        id: res.id,
+        name: res.title || res.name,
+        poster: res.poster_path,
+        detail: res.overview,
+      },
+    ]);
+    console.log(res);
+  };
 
   return (
     <div className="home">
@@ -87,10 +107,14 @@ function Home() {
                       </div>
 
                       <div className="detail-btn">
-                        <button className="fav-btn">
+                        <button
+                          className="fav-btn"
+                          onClick={() => handleFavorite(res)}
+                        >
                           <BsFillHeartFill />
                           Add To favorites
                         </button>
+
                         <Link to={`${res.id}`}>
                           <div>View Details</div>
                         </Link>

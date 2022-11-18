@@ -7,6 +7,7 @@ import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import { Img } from "../App";
 import { AiOutlineHeart } from "react-icons/ai";
+import notFound from "../logo/image404.jpg";
 
 function Results() {
   const { search, setSearch, result, setResult, text, popular, setPopular } =
@@ -26,9 +27,14 @@ function Results() {
 
       <div className="result-container">
         {result?.results?.map((res) => (
-          <div className="card">
+          <div className="card" key={res.id}>
             <div className="img-container">
-              <img className="card-image" src={Img + res.poster_path} />
+              <img
+                className="card-image"
+                src={
+                  res.poster_path === null ? notFound : Img + res.poster_path
+                }
+              />
               <div className="card-heart">
                 <AiOutlineHeart />
               </div>
