@@ -22,15 +22,7 @@ import { Pagination } from "swiper";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const {
-    search,
-    setSearch,
-    result,
-    setResult,
-    popular,
-    favorite,
-    setFavorite,
-  } = useContext(mainContext);
+  const { popular, favorite, setFavorite } = useContext(mainContext);
 
   const handleFavorite = (res) => {
     setFavorite([
@@ -40,10 +32,11 @@ function Home() {
         name: res.title || res.name,
         poster: res.poster_path,
         detail: res.overview,
+        overview: res.overview,
       },
     ]);
-    console.log(res);
   };
+  console.log(popular);
 
   return (
     <div className="home">
@@ -95,7 +88,6 @@ function Home() {
                     <div className="right-bottom-side">
                       <div className="popular-card-year">
                         {res?.release_date?.slice(0, 4) || 2021}
-                        {/* 2022 */}
                       </div>
 
                       <div className="popular-card-name">
@@ -103,7 +95,7 @@ function Home() {
                       </div>
 
                       <div className="popular-card-detail">
-                        {trim(res?.overview, 120)}
+                        {trim(res?.overview, 87)}
                       </div>
 
                       <div className="detail-btn">

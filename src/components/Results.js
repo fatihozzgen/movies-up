@@ -10,9 +10,30 @@ import { AiOutlineHeart } from "react-icons/ai";
 import notFound from "../logo/image404.jpg";
 
 function Results() {
-  const { search, setSearch, result, setResult, text, popular, setPopular } =
-    useContext(mainContext);
+  const {
+    search,
+    setSearch,
+    result,
+    setResult,
+    text,
+    popular,
+    setPopular,
+    favorite,
+    setFavorite,
+  } = useContext(mainContext);
   console.log(result);
+
+  const handleFavorite = (res) => {
+    setFavorite([
+      ...favorite.filter((item) => item.id !== res.id),
+      {
+        id: res.id,
+        name: res.title || res.name,
+        poster: res.poster_path,
+        detail: res.overview,
+      },
+    ]);
+  };
 
   return (
     <div>
@@ -36,7 +57,8 @@ function Results() {
                   res.poster_path === null ? notFound : Img + res.poster_path
                 }
               />
-              <div className="card-heart">
+              {/* <div className="card-overview"> {res?.genres[0]}</div> */}
+              <div className="card-heart" onClick={() => handleFavorite(res)}>
                 <AiOutlineHeart />
               </div>
             </div>

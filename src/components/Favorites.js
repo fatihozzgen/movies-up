@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Favorite from "../logo/favorites.png";
-import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import { mainContext, useContext } from "../context";
 import { Img } from "../App";
@@ -9,15 +8,7 @@ import { trim } from "../trim";
 import { AiFillHeart } from "react-icons/ai";
 
 function Favorites() {
-  const {
-    search,
-    setSearch,
-    result,
-    setResult,
-    popular,
-    favorite,
-    setFavorite,
-  } = useContext(mainContext);
+  const { favorite, setFavorite } = useContext(mainContext);
 
   const removeCard = (id) => {
     setFavorite([...favorite.filter((item) => item.id !== id)]);
@@ -55,10 +46,7 @@ function Favorites() {
               </div>
               {/* <div className="card-year">{res?.Year}</div> */}
               <div className="card-name">{item.name}</div>
-              <div className="card-detail">
-                The aging patriarch of an organized crime dynasty transfers
-                control of his clandestine empire to his reluctant son.
-              </div>
+              <div className="card-detail">{trim(item.overview, 85)}</div>
             </div>
           </div>
         ))}

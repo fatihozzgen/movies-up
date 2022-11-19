@@ -65,8 +65,8 @@
   color: #f5c518;
   border-radius: 50%;
   position: absolute;
-  bottom: 30px;
-  right: 20px;
+  bottom: 0.55rem;
+  right: 0.35rem;
   font-size: 0.35rem;
   display: flex;
   align-items: center;
@@ -89,4 +89,17 @@
   margin-right: 15%;
   row-gap: 0.4rem;
   column-gap: 1rem;
+}
+
+.card-overview {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background-color: #f5c518;
+  width: 2.2rem;
+  height: 0.75rem;
+  font-size: 0.45rem;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 3px;
 }

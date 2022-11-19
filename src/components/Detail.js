@@ -6,13 +6,12 @@ import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import { mainContext, useContext } from "../context";
 import notFound from "../logo/image404.jpg";
-
 import { BsFillHeartFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
 function Detail() {
-  const { popular, similar, setSimilar, setFavorite, favorite } =
+  const { similar, setSimilar, setFavorite, favorite } =
     useContext(mainContext);
   const [detail, setDetail] = useState(null);
 
@@ -81,7 +80,6 @@ function Detail() {
                 {/* {detail?.vote_average.splice(0, 4)} */}
               </div>
             </div>
-            {/* <button className="fav-btn">Trailer</button> */}
             <button className="fav-btn">
               <BsFillHeartFill />
               Add To favorites
@@ -140,7 +138,6 @@ function Detail() {
                     <div className="right-bottom-side">
                       <div className="popular-card-year">
                         {res?.release_date?.slice(0, 4)}
-                        {/* 2022 */}
                       </div>
 
                       <div className="popular-card-name">
