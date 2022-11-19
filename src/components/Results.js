@@ -12,6 +12,7 @@ import notFound from "../logo/image404.jpg";
 function Results() {
   const { search, setSearch, result, setResult, text, popular, setPopular } =
     useContext(mainContext);
+  console.log(result);
 
   return (
     <div>
@@ -46,11 +47,8 @@ function Results() {
                 <div className="card-point"> 8.8</div>
               </div>
               {/* <div className="card-year">{res?.Year}</div> */}
-              <div className="card-name">{trim(res?.title, 30)}</div>
-              <div className="card-detail">
-                The aging patriarch of an organized crime dynasty transfers
-                control of his clandestine empire to his reluctant son.
-              </div>
+              <div className="card-name">{trim(res?.title, 20)}</div>
+              <div className="card-detail">{trim(res?.overview, 85)}</div>
             </div>
           </div>
         ))}
