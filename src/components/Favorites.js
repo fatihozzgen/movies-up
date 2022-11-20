@@ -44,7 +44,9 @@ function Favorites() {
             <div className="bottom-side">
               <div className="imbd-container">
                 <img className="card-imbd" src={imbd} />
-                <div className="card-point"> 8.8</div>
+                <div className="card-point">
+                  {String(item?.point).slice(0, 3)}
+                </div>
               </div>
               {/* <div className="card-year">{res?.Year}</div> */}
               <div className="card-name">{item?.name}</div>

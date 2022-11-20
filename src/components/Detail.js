@@ -49,7 +49,6 @@ function Detail() {
       )
       .then((sim) => setSimilar(sim.data));
   };
-  console.log(detail);
 
   return (
     <>
@@ -75,10 +74,7 @@ function Detail() {
           <div className="detail-right-top-side">
             <div className="detail-imbd">
               <img src={imbd} />
-              <div>
-                {Math.round(detail?.vote_average)}
-                {/* {detail?.vote_average.splice(0, 4)} */}
-              </div>
+              <div>{String(detail?.vote_average).slice(0, 3)}</div>
             </div>
             <button className="fav-btn">
               <BsFillHeartFill />

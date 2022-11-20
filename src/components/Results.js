@@ -34,6 +34,7 @@ function Results() {
           name: res.title || res.name,
           poster: res.poster_path,
           detail: res.overview,
+          point: res.vote_average,
         },
       ]);
     }
@@ -74,7 +75,10 @@ function Results() {
             <div className="bottom-side">
               <div className="imbd-container">
                 <img className="card-imbd" src={imbd} />
-                <div className="card-point"> 8.8</div>
+                <div className="card-point">
+                  {" "}
+                  {String(res?.vote_average).slice(0, 3)}
+                </div>
               </div>
               {/* <div className="card-year">{res?.Year}</div> */}
               <div className="card-name">{trim(res?.title, 20)}</div>

@@ -33,6 +33,7 @@ function Home() {
         poster: res.poster_path,
         detail: res.overview,
         overview: res.overview,
+        point: res.vote_average,
       },
     ]);
   };
@@ -76,7 +77,9 @@ function Home() {
                     <div className="right-top-side">
                       <div className="popular-imbd-container">
                         <img className="popular-card-imbd" src={imbd} />
-                        <div className="popular-card-point"> 8.8</div>
+                        <div className="popular-card-point">
+                          {String(res?.vote_average).slice(0, 3)}
+                        </div>
                       </div>
 
                       <div className="popular-buttons-cont">
