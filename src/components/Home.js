@@ -91,11 +91,11 @@ function Home() {
                       </div>
 
                       <div className="popular-card-name">
-                        {trim(res.title || res.name, 23)}
+                        {trim(res?.title || res.name, 23)}
                       </div>
 
                       <div className="popular-card-detail">
-                        {trim(res?.overview, 87)}
+                        {trim(res?.overview, 80)}
                       </div>
 
                       <div className="detail-btn">

@@ -6,7 +6,7 @@ import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import { Img } from "../App";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import notFound from "../logo/image404.jpg";
 
 function Results() {
@@ -24,15 +24,19 @@ function Results() {
   console.log(result);
 
   const handleFavorite = (res) => {
-    setFavorite([
-      ...favorite.filter((item) => item.id !== res.id),
-      {
-        id: res.id,
-        name: res.title || res.name,
-        poster: res.poster_path,
-        detail: res.overview,
-      },
-    ]);
+    if (favorite.find((item) => item.id === res.id)) {
+      setFavorite([...favorite.filter((item) => item.id !== res.id)]);
+    } else {
+      setFavorite([
+        ...favorite.filter((item) => item.id !== res.id),
+        {
+          id: res.id,
+          name: res.title || res.name,
+          poster: res.poster_path,
+          detail: res.overview,
+        },
+      ]);
+    }
   };
 
   return (
@@ -59,7 +63,11 @@ function Results() {
               />
               {/* <div className="card-overview"> {res?.genres[0]}</div> */}
               <div className="card-heart" onClick={() => handleFavorite(res)}>
-                <AiOutlineHeart />
+                {favorite.find((item) => item.id === res.id) ? (
+                  <AiFillHeart />
+                ) : (
+                  <AiOutlineHeart />
+                )}
               </div>
             </div>
 
@@ -80,3 +88,7 @@ function Results() {
 }
 
 export default Results;
+
+{
+  /* <AiOutlineHeart /> */
+}

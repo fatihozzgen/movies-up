@@ -17,6 +17,8 @@ function Favorites() {
   useEffect(() => {
     console.log(favorite);
   }, [favorite]);
+
+  console.log(favorite);
   return (
     <div>
       <div className="line-background">
@@ -33,8 +35,8 @@ function Favorites() {
         {favorite.map((item) => (
           <div className="card" key={item.id}>
             <div className="img-container">
-              <img className="card-image" src={Img + item.poster} />
-              <div className="card-heart" onClick={() => removeCard(item.id)}>
+              <img className="card-image" src={Img + item?.poster} />
+              <div className="card-heart" onClick={() => removeCard(item?.id)}>
                 <AiFillHeart />
               </div>
             </div>
@@ -45,8 +47,8 @@ function Favorites() {
                 <div className="card-point"> 8.8</div>
               </div>
               {/* <div className="card-year">{res?.Year}</div> */}
-              <div className="card-name">{item.name}</div>
-              <div className="card-detail">{trim(item.overview, 85)}</div>
+              <div className="card-name">{item?.name}</div>
+              <div className="card-detail">{trim(item?.overview, 80)}</div>
             </div>
           </div>
         ))}
