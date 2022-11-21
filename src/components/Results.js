@@ -21,7 +21,6 @@ function Results() {
     favorite,
     setFavorite,
   } = useContext(mainContext);
-  console.log(result);
 
   const handleFavorite = (res) => {
     if (favorite.find((item) => item.id === res.id)) {

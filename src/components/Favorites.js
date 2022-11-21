@@ -15,10 +15,18 @@ function Favorites() {
   };
 
   useEffect(() => {
-    console.log(favorite);
+    const stroge = localStorage.setItem(
+      "added-favorites",
+      JSON.stringify(favorite)
+    );
+    console.log(stroge);
   }, [favorite]);
 
-  console.log(favorite);
+  useEffect(() => {
+    const getMovies = JSON.parse(localStorage.getItem("added-favorites"));
+    setFavorite(getMovies);
+  }, []);
+
   return (
     <div>
       <div className="line-background">
