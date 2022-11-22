@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { mainContext, useContext } from "../context";
 import axios from "axios";
 import People from "../logo/people.png";
@@ -22,7 +22,7 @@ import { Pagination } from "swiper";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const { popular, favorite, setFavorite } = useContext(mainContext);
+  const { popular, favorite, setFavorite, setDeneme } = useContext(mainContext);
 
   const handleFavorite = (res) => {
     setFavorite([
@@ -37,6 +37,7 @@ function Home() {
       },
     ]);
   };
+  console.log(popular);
 
   return (
     <div className="home">
@@ -67,7 +68,10 @@ function Home() {
           >
             {popular?.results?.map((res) => (
               <SwiperSlide key={res.id}>
-                <div className="populer-card">
+                <div
+                  onClick={() => setDeneme(res.media_type)}
+                  className="populer-card"
+                >
                   <div className="popular-img">
                     <img src={Img + res.poster_path} />
                   </div>

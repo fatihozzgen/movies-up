@@ -60,8 +60,8 @@
 }
 
 .card-heart {
-  width: 30px;
-  height: 30px;
+  width: 0.7rem;
+  height: 0.7rem;
   color: #f5c518;
   border-radius: 50%;
   position: absolute;

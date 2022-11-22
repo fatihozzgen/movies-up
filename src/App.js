@@ -28,6 +28,7 @@ function App() {
   const [popular, setPopular] = useState();
   const [similar, setSimilar] = useState();
   const [favorite, setFavorite] = useState([]);
+  const [deneme, setDeneme] = useState();
 
   const datax = {
     search,
@@ -42,6 +43,8 @@ function App() {
     setSimilar,
     favorite,
     setFavorite,
+    deneme,
+    setDeneme,
   };
 
   return (

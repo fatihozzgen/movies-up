@@ -20,6 +20,8 @@ function Results() {
     setPopular,
     favorite,
     setFavorite,
+    setDeneme,
+    deneme,
   } = useContext(mainContext);
 
   const handleFavorite = (res) => {
@@ -38,6 +40,7 @@ function Results() {
       ]);
     }
   };
+  console.log(deneme);
 
   return (
     <div>
@@ -53,7 +56,7 @@ function Results() {
 
       <div className="result-container">
         {result?.results?.map((res) => (
-          <div className="card" key={res.id}>
+          <div className="card" key={res.id} onClick={() => setDeneme(res)}>
             <div className="img-container">
               <img
                 className="card-image"

@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
 function Detail() {
-  const { similar, setSimilar, setFavorite, favorite } =
+  const { similar, setSimilar, setFavorite, favorite, deneme } =
     useContext(mainContext);
   const [detail, setDetail] = useState(null);
 
@@ -20,7 +20,7 @@ function Detail() {
   const res = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
+        `https://api.themoviedb.org/3/${deneme}/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
       )
       .then((res) => setDetail(res.data));
   };
@@ -42,6 +42,8 @@ function Detail() {
     sim();
   }, [id]);
 
+  console.log(detail);
+
   const sim = async () => {
     await axios
       .get(
@@ -49,14 +51,13 @@ function Detail() {
       )
       .then((sim) => setSimilar(sim.data));
   };
-
   return (
     <>
       <div className="line-background">
         <Link to="/">
           <div className="fav-home-btn">Home /</div>
         </Link>
-        <div> {detail?.title}</div>
+        <div> {detail?.title || detail?.name}</div>
       </div>
 
       <div className="detail-card">
@@ -84,10 +85,13 @@ function Detail() {
 
           <div className="detail-right-bottom-side">
             <div className="detail-card-year">
-              {detail?.release_date.slice(0, 4)}
+              {detail?.last_air_date?.slice(0, 4) ||
+                detail?.release_date?.slice(0, 4)}
             </div>
 
-            <div className="detail-card-name">{detail?.title}</div>
+            <div className="detail-card-name">
+              {detail?.title || detail?.name}
+            </div>
 
             <div className="detail-card-detail">{detail?.overview} </div>
             <div className="detail-buttons-cont">
