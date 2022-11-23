@@ -138,4 +138,13 @@ html {
   .popular-text {
     padding-left: 2.2rem;
   }
+
+  .select-dropdown select {
+    padding-right: 0.32rem;
+  }
+
+  .select-dropdown:after {
+    right: 0.1rem;
+    top: 55%;
+  }
 }

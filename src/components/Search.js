@@ -30,7 +30,7 @@ function Search() {
   const res = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/search/tv?api_key=bcc4ff10c2939665232d75d8bf0ec093&query=${search}`
+        `https://api.themoviedb.org/3/search/movie?api_key=bcc4ff10c2939665232d75d8bf0ec093&query=${search}`
       )
       .then((res) => setResult(res.data));
   };
