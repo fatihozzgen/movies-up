@@ -5,14 +5,22 @@ function Filter() {
   return (
     <>
       <div className="filter">
-        <div className="year-container">
+        <div className="select-dropdown">
           <select className="filter-year">
+            <option value="">Year</option>
+            <option value="">Year</option>
+            <option value="">Year</option>
+            <option value="">Year</option>
             <option value="">Year</option>
           </select>
         </div>
 
-        <div className="type-container">
+        <div className="select-dropdown">
           <select className="filter-type">
+            <option value="">Type</option>
+            <option value="">Type</option>
+            <option value="">Type</option>
+            <option value="">Type</option>
             <option value="">Type</option>
           </select>
         </div>

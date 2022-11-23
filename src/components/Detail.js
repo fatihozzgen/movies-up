@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
 function Detail() {
-  const { similar, setSimilar, setFavorite, favorite, deneme } =
+  const { similar, setSimilar, setFavorite, favorite, type } =
     useContext(mainContext);
   const [detail, setDetail] = useState(null);
 
@@ -20,7 +20,7 @@ function Detail() {
   const res = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/${deneme}/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
+        `https://api.themoviedb.org/3/${type}/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
       )
       .then((res) => setDetail(res.data));
   };

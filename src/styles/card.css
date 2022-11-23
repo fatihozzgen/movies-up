@@ -73,6 +73,7 @@
   justify-content: center;
   background-color: whitesmoke;
   cursor: pointer;
+  border: 1px solid #f5c518;
 }
 
 .bottom-side {

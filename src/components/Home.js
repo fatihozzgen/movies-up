@@ -22,7 +22,7 @@ import { Pagination } from "swiper";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const { popular, favorite, setFavorite, setDeneme } = useContext(mainContext);
+  const { popular, favorite, setFavorite, setType } = useContext(mainContext);
 
   const handleFavorite = (res) => {
     setFavorite([
@@ -69,7 +69,7 @@ function Home() {
             {popular?.results?.map((res) => (
               <SwiperSlide key={res.id}>
                 <div
-                  onClick={() => setDeneme(res.media_type)}
+                  onClick={() => setType(res.media_type)}
                   className="populer-card"
                 >
                   <div className="popular-img">
