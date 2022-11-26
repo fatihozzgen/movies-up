@@ -29,8 +29,14 @@ function App() {
   const [similar, setSimilar] = useState();
   const [favorite, setFavorite] = useState([]);
   const [type, setType] = useState();
+  const [filterData, setFilterData] = useState([]);
+  const [navFilter, setNavFilter] = useState([]);
 
   const datax = {
+    navFilter,
+    setNavFilter,
+    filterData,
+    setFilterData,
     search,
     setSearch,
     result,

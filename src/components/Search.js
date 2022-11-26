@@ -5,7 +5,7 @@ import { mainContext, useContext } from "../context";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
-function Search() {
+function Search({ filtred, allChange, searchValue }) {
   const {
     search,
     setSearch,
@@ -30,7 +30,7 @@ function Search() {
   const res = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=bcc4ff10c2939665232d75d8bf0ec093&query=${search}`
+        `https://api.themoviedb.org/3/search/movie?api_key=bcc4ff10c2939665232d75d8bf0ec093&query=${searchValue}`
       )
       .then((res) => setResult(res.data));
   };
@@ -39,8 +39,7 @@ function Search() {
     <form className="nav-input" onSubmit={handleSearch}>
       <input
         placeholder="Enter movie name here"
-        onChange={(e) => setSearch(e.target.value)}
-        value={search}
+        onChange={(e) => allChange(e, filtred)}
       />
 
       <div className="search-icon">

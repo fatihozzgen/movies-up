@@ -2,8 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Movie from "../logo/movie.png";
 import Search from "./Search";
+import { mainContext, useContext } from "../context";
 
 function Navbar() {
+  const { navFilter, setNavFilter } = useContext(mainContext);
+
+  console.log("nav", navFilter);
+
   return (
     <>
       <div className="navbar">
@@ -23,7 +28,11 @@ function Navbar() {
           </div>
 
           <div className="navbar-search">
-            <Search />
+            <Search
+              filtred={(veri) => setNavFilter(veri)}
+              allChange={(e, filtred) => filtred(e.target.value)}
+              searchValue={navFilter}
+            />
           </div>
         </div>
       </div>

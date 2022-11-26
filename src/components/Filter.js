@@ -1,7 +1,11 @@
 import React from "react";
 import Search from "./Search";
+import { mainContext, useContext } from "../context";
 
 function Filter() {
+  const { filterData, setFilterData } = useContext(mainContext);
+
+  console.log("filter", filterData);
   return (
     <>
       <div className="filter">
@@ -26,7 +30,11 @@ function Filter() {
         </div>
 
         <div className="filter-search">
-          <Search />
+          <Search
+            filtred={(veri) => setFilterData([...veri].join(""))}
+            allChange={(e, filtred) => filtred(e.target.value)}
+            searchValue={filterData}
+          />
         </div>
 
         <div className="filter-button">
