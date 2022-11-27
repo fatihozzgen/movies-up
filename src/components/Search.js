@@ -6,16 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 
 function Search({ filtred, allChange, searchValue }) {
-  const {
-    search,
-    setSearch,
-    result,
-    setResult,
-    text,
-    setText,
-    popular,
-    setPopular,
-  } = useContext(mainContext);
+  const { search, setSearch, setResult, setText } = useContext(mainContext);
 
   const navigate = useNavigate();
 

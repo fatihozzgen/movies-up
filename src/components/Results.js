@@ -10,19 +10,8 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import notFound from "../logo/image404.jpg";
 
 function Results() {
-  const {
-    search,
-    setSearch,
-    result,
-    setResult,
-    text,
-    popular,
-    setPopular,
-    favorite,
-    setFavorite,
-    setDeneme,
-    deneme,
-  } = useContext(mainContext);
+  const { result, text, favorite, setFavorite, setDeneme, deneme } =
+    useContext(mainContext);
 
   const handleFavorite = (res) => {
     if (favorite.find((item) => item.id === res.id)) {
