@@ -7,8 +7,6 @@ import { mainContext, useContext } from "../context";
 function Navbar() {
   const { navFilter, setNavFilter } = useContext(mainContext);
 
-  console.log("nav", navFilter);
-
   return (
     <>
       <div className="navbar">

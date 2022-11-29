@@ -5,7 +5,6 @@ import { mainContext, useContext } from "../context";
 function Filter() {
   const { filterData, setFilterData } = useContext(mainContext);
 
-  console.log("filter", filterData);
   return (
     <>
       <div className="filter">

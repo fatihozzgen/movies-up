@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { mainContext } from "../context";
-import Godfather from "../logo/godfather.png";
 import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import { Img } from "../App";
@@ -10,8 +9,7 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import notFound from "../logo/image404.jpg";
 
 function Results() {
-  const { result, text, favorite, setFavorite, setDeneme, deneme } =
-    useContext(mainContext);
+  const { result, text, favorite, setFavorite } = useContext(mainContext);
 
   const handleFavorite = (res) => {
     if (favorite.find((item) => item.id === res.id)) {
@@ -29,7 +27,7 @@ function Results() {
       ]);
     }
   };
-  console.log(deneme);
+  console.log(favorite);
 
   return (
     <div>
@@ -45,7 +43,7 @@ function Results() {
 
       <div className="result-container">
         {result?.results?.map((res) => (
-          <div className="card" key={res.id} onClick={() => setDeneme(res)}>
+          <div className="card" key={res.id}>
             <div className="img-container">
               <img
                 className="card-image"

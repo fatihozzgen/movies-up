@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Up from "../logo/up.png";
 import { RiSearchLine } from "react-icons/ri";
 import { mainContext, useContext } from "../context";
 import axios from "axios";
@@ -12,7 +11,7 @@ function Search({ filtred, allChange, searchValue }) {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    setText(search);
+    setText(searchValue);
     setSearch("");
     navigate("/results");
     res();
