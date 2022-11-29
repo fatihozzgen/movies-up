@@ -1,4 +1,4 @@
-[Click here to experience live](https://https://movies-up.vercel.app)
+[Click here to experience live](https://movies-up.vercel.app)
 
 ![mainpage](/src/img/mainpage.png)
 ![detailpage](/src/img/detailpage.png)
