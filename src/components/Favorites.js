@@ -15,7 +15,7 @@ function Favorites() {
   };
 
   useEffect(() => {
-    if (favorite.length > 0)
+    if (favorite?.length > 0)
       localStorage.setItem("added-favorites", JSON.stringify(favorite));
   }, [favorite]);
 
