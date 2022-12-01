@@ -37,7 +37,7 @@ function Favorites() {
         <img src={Favorite} />
       </div>
       <div className="result-container">
-        {favorite.map((item) => (
+        {favorite?.map((item) => (
           <div className="card" key={item.id}>
             <div className="img-container">
               <img className="card-image" src={Img + item?.poster} />
