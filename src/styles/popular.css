@@ -87,7 +87,7 @@
   color: whitesmoke;
   border: none;
   border-radius: 0.1rem;
-  font-size: 0.2rem;
+  font-size: 0.23rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -96,6 +96,11 @@
 
 .fav-btn > svg {
   font-size: 0.35rem;
+  /* border: 1px solid tomato; */
+}
+
+.detail-icn > svg {
+  font-size: 0.45rem;
 }
 
 .popular-card-year {

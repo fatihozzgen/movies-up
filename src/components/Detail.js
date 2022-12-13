@@ -9,6 +9,7 @@ import notFound from "../logo/image404.jpg";
 import { BsFillHeartFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 function Detail() {
   const { similar, setSimilar, setFavorite, favorite, type } =
@@ -51,6 +52,7 @@ function Detail() {
       )
       .then((sim) => setSimilar(sim.data));
   };
+  console.log(favorite);
   return (
     <>
       <div className="line-background">
@@ -78,7 +80,13 @@ function Detail() {
               <div>{String(detail?.vote_average).slice(0, 3)}</div>
             </div>
             <button className="fav-btn">
-              <BsFillHeartFill />
+              {favorite?.find((item) => item.id === detail?.id) ? (
+                <div className="detail-icn">
+                  <AiFillHeart color="#ff3838" />
+                </div>
+              ) : (
+                <BsFillHeartFill />
+              )}
               Add To favorites
             </button>
           </div>
