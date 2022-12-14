@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import { mainContext, useContext } from "../context";
-import axios from "axios";
 import People from "../logo/people.png";
 import Yellow from "../logo/yellow.png";
 import Movieup from "../logo/wmovieup.png";
@@ -12,9 +10,9 @@ import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import "../styles/card.css";
 import { Img } from "../App";
-import Search from "./Search";
 
 import { BsFillHeartFill } from "react-icons/bs";
+import { AiFillHeart } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -25,17 +23,20 @@ function Home() {
   const { popular, favorite, setFavorite, setType } = useContext(mainContext);
 
   const handleFavorite = (res) => {
-    setFavorite([
-      ...favorite.filter((item) => item.id !== res.id),
-      {
-        id: res.id,
-        name: res.title || res.name,
-        poster: res.poster_path,
-        detail: res.overview,
-        overview: res.overview,
-        point: res.vote_average,
-      },
-    ]);
+    if (favorite.find((item) => item.id === res.id)) {
+      setFavorite([...favorite.filter((item) => item.id !== res.id)]);
+    } else {
+      setFavorite([
+        ...favorite.filter((item) => item.id !== res.id),
+        {
+          id: res.id,
+          name: res.title || res.name,
+          poster: res.poster_path,
+          detail: res.overview,
+          point: res.vote_average,
+        },
+      ]);
+    }
   };
 
   return (
@@ -108,7 +109,11 @@ function Home() {
                           className="fav-btn"
                           onClick={() => handleFavorite(res)}
                         >
-                          <BsFillHeartFill />
+                          {favorite?.find((item) => item.id === res?.id) ? (
+                            <AiFillHeart color="#ff3838" />
+                          ) : (
+                            <BsFillHeartFill />
+                          )}
                           Add To favorites
                         </button>
 

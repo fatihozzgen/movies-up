@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { mainContext } from "../context";
@@ -43,37 +42,39 @@ function Results() {
 
       <div className="result-container">
         {result?.results?.map((res) => (
-          <div className="card" key={res.id}>
-            <div className="img-container">
-              <img
-                className="card-image"
-                src={
-                  res.poster_path === null ? notFound : Img + res.poster_path
-                }
-              />
-              {/* <div className="card-overview"> {res?.genres[0]}</div> */}
-              <div className="card-heart" onClick={() => handleFavorite(res)}>
-                {favorite.find((item) => item.id === res.id) ? (
-                  <AiFillHeart />
-                ) : (
-                  <AiOutlineHeart />
-                )}
-              </div>
-            </div>
-
-            <div className="bottom-side">
-              <div className="imbd-container">
-                <img className="card-imbd" src={imbd} />
-                <div className="card-point">
-                  {" "}
-                  {String(res?.vote_average).slice(0, 3)}
+          <Link to={`/${res.id}`} replace>
+            <div className="card" key={res.id}>
+              <div className="img-container">
+                <img
+                  className="card-image"
+                  src={
+                    res.poster_path === null ? notFound : Img + res.poster_path
+                  }
+                />
+                {/* <div className="card-overview"> {res?.genres[0]}</div> */}
+                <div className="card-heart" onClick={() => handleFavorite(res)}>
+                  {favorite.find((item) => item.id === res.id) ? (
+                    <AiFillHeart />
+                  ) : (
+                    <AiOutlineHeart />
+                  )}
                 </div>
               </div>
-              {/* <div className="card-year">{res?.Year}</div> */}
-              <div className="card-name">{trim(res?.title, 20)}</div>
-              <div className="card-detail">{trim(res?.overview, 85)}</div>
+
+              <div className="bottom-side">
+                <div className="imbd-container">
+                  <img className="card-imbd" src={imbd} />
+                  <div className="card-point">
+                    {" "}
+                    {String(res?.vote_average).slice(0, 3)}
+                  </div>
+                </div>
+                {/* <div className="card-year">{res?.Year}</div> */}
+                <div className="card-name">{trim(res?.title, 20)}</div>
+                <div className="card-detail">{trim(res?.overview, 85)}</div>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

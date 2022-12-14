@@ -12,7 +12,6 @@ function Search({ filtred, allChange, searchValue }) {
   const handleSearch = (e) => {
     e.preventDefault();
     setText(searchValue);
-    setSearch("");
     navigate("/results");
     res();
   };

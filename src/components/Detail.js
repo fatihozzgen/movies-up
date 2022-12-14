@@ -9,7 +9,7 @@ import notFound from "../logo/image404.jpg";
 import { BsFillHeartFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 
 function Detail() {
   const { similar, setSimilar, setFavorite, favorite, type } =
@@ -21,21 +21,26 @@ function Detail() {
   const res = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/${type}/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
+        `https://api.themoviedb.org/3/movie/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
       )
       .then((res) => setDetail(res.data));
   };
 
   const handleFavorite = (res) => {
-    setFavorite([
-      ...favorite.filter((item) => item.id !== res.id),
-      {
-        id: res.id,
-        name: res.title || res.name,
-        poster: res.poster_path,
-        detail: res.overview,
-      },
-    ]);
+    if (favorite.find((item) => item.id === res.id)) {
+      setFavorite([...favorite.filter((item) => item.id !== res.id)]);
+    } else {
+      setFavorite([
+        ...favorite.filter((item) => item.id !== res.id),
+        {
+          id: res.id,
+          name: res.title || res.name,
+          poster: res.poster_path,
+          detail: res.overview,
+          point: res.vote_average,
+        },
+      ]);
+    }
   };
 
   useEffect(() => {
@@ -79,11 +84,9 @@ function Detail() {
               <img src={imbd} />
               <div>{String(detail?.vote_average).slice(0, 3)}</div>
             </div>
-            <button className="fav-btn">
+            <button className="fav-btn" onClick={() => handleFavorite(detail)}>
               {favorite?.find((item) => item.id === detail?.id) ? (
-                <div className="detail-icn">
-                  <AiFillHeart color="#ff3838" />
-                </div>
+                <AiFillHeart color="#ff3838" />
               ) : (
                 <BsFillHeartFill />
               )}
@@ -161,7 +164,11 @@ function Detail() {
                           className="fav-btn"
                           onClick={() => handleFavorite(res)}
                         >
-                          <BsFillHeartFill />
+                          {favorite?.find((item) => item.id === res?.id) ? (
+                            <AiFillHeart color="#ff3838" />
+                          ) : (
+                            <BsFillHeartFill />
+                          )}
                           Add To favorites
                         </button>
                         <Link to={`/${res.id}`}>
