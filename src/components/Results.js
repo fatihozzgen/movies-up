@@ -26,7 +26,7 @@ function Results() {
       ]);
     }
   };
-  console.log(favorite);
+  console.log(result);
 
   return (
     <div>
@@ -82,7 +82,3 @@ function Results() {
 }
 
 export default Results;
-
-{
-  /* <AiOutlineHeart /> */
-}

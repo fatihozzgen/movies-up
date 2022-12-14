@@ -21,7 +21,7 @@ function Detail() {
   const res = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
+        `https://api.themoviedb.org/3/${type}/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
       )
       .then((res) => setDetail(res.data));
   };
@@ -48,8 +48,6 @@ function Detail() {
     sim();
   }, [id]);
 
-  console.log(detail);
-
   const sim = async () => {
     await axios
       .get(
@@ -57,7 +55,6 @@ function Detail() {
       )
       .then((sim) => setSimilar(sim.data));
   };
-  console.log(favorite);
   return (
     <>
       <div className="line-background">

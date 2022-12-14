@@ -22,6 +22,7 @@ function Search({ filtred, allChange, searchValue }) {
         `https://api.themoviedb.org/3/search/movie?api_key=bcc4ff10c2939665232d75d8bf0ec093&query=${searchValue}`
       )
       .then((res) => setResult(res.data));
+    filtred("");
   };
 
   return (
@@ -29,6 +30,7 @@ function Search({ filtred, allChange, searchValue }) {
       <input
         placeholder="Enter movie name here"
         onChange={(e) => allChange(e, filtred)}
+        value={searchValue}
       />
 
       <div className="search-icon">

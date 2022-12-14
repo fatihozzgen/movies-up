@@ -14,16 +14,6 @@ function Favorites() {
     setFavorite([...favorite.filter((item) => item.id !== id)]);
   };
 
-  useEffect(() => {
-    if (favorite?.length > 0)
-      localStorage.setItem("added-favorites", JSON.stringify(favorite));
-  }, [favorite]);
-
-  useEffect(() => {
-    const getMovies = JSON.parse(localStorage.getItem("added-favorites"));
-    setFavorite(getMovies);
-  }, []);
-
   return (
     <div>
       <div className="line-background">

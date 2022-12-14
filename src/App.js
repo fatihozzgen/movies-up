@@ -15,7 +15,7 @@ import "./styles/result.css";
 import "./styles/detail.css";
 
 import "swiper/css/bundle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Fetch } from "./components/Fetch";
 import Detail from "./components/Detail";
 
@@ -27,10 +27,18 @@ function App() {
   const [text, setText] = useState();
   const [popular, setPopular] = useState();
   const [similar, setSimilar] = useState();
-  const [favorite, setFavorite] = useState([]);
+  const [favorite, setFavorite] = useState(() => {
+    return JSON.parse(localStorage.getItem("added-favorites")) || [];
+  });
   const [type, setType] = useState();
   const [filterData, setFilterData] = useState([]);
   const [navFilter, setNavFilter] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("added-favorites", JSON.stringify(favorite));
+  }, [favorite]);
+
+  console.log(favorite);
 
   const datax = {
     navFilter,
