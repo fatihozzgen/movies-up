@@ -38,7 +38,6 @@ function Home() {
       ]);
     }
   };
-  console.log(popular);
 
   return (
     <div className="home">

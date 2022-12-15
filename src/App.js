@@ -38,8 +38,6 @@ function App() {
     localStorage.setItem("added-favorites", JSON.stringify(favorite));
   }, [favorite]);
 
-  console.log(favorite);
-
   const datax = {
     navFilter,
     setNavFilter,

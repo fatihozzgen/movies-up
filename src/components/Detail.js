@@ -6,7 +6,7 @@ import imbd from "../logo/imbd.png";
 import { trim } from "../trim";
 import { mainContext, useContext } from "../context";
 import notFound from "../logo/image404.jpg";
-import { BsFillHeartFill } from "react-icons/bs";
+import { BsFillHeartFill, BsFillPlayBtnFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import { AiFillHeart } from "react-icons/ai";
@@ -55,6 +55,8 @@ function Detail() {
       )
       .then((sim) => setSimilar(sim.data));
   };
+
+  console.log(detail);
   return (
     <>
       <div className="line-background">
@@ -81,14 +83,25 @@ function Detail() {
               <img src={imbd} />
               <div>{String(detail?.vote_average).slice(0, 3)}</div>
             </div>
-            <button className="fav-btn" onClick={() => handleFavorite(detail)}>
-              {favorite?.find((item) => item.id === detail?.id) ? (
-                <AiFillHeart color="#ff3838" />
-              ) : (
-                <BsFillHeartFill />
-              )}
-              Add To favorites
-            </button>
+
+            <div style={{ display: "flex", columnGap: "0.5rem" }}>
+              <button className="fav-btn">
+                <BsFillPlayBtnFill />
+                Watch Trailer
+              </button>
+
+              <button
+                className="fav-btn"
+                onClick={() => handleFavorite(detail)}
+              >
+                {favorite?.find((item) => item.id === detail?.id) ? (
+                  <AiFillHeart color="#ff3838" />
+                ) : (
+                  <BsFillHeartFill />
+                )}
+                Add To favorites
+              </button>
+            </div>
           </div>
 
           <div className="detail-right-bottom-side">
