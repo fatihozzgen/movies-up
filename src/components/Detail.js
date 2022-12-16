@@ -15,6 +15,7 @@ function Detail() {
   const { similar, setSimilar, setFavorite, favorite, type } =
     useContext(mainContext);
   const [detail, setDetail] = useState(null);
+  const [trailer, setTrailer] = useState(undefined);
 
   const { id } = useParams();
 
@@ -24,6 +25,7 @@ function Detail() {
         `https://api.themoviedb.org/3/${type}/${id}?api_key=bcc4ff10c2939665232d75d8bf0ec093&language=en-US`
       )
       .then((res) => setDetail(res.data));
+    fetchTrailer();
   };
 
   const handleFavorite = (res) => {
@@ -43,6 +45,19 @@ function Detail() {
     }
   };
 
+  const fetchTrailer = async () => {
+    await fetch(
+      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=bcc4ff10c2939665232d75d8bf0ec093`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setTrailer(data?.results[0]?.key);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   useEffect(() => {
     res();
     sim();
@@ -55,8 +70,8 @@ function Detail() {
       )
       .then((sim) => setSimilar(sim.data));
   };
+  console.log(trailer);
 
-  console.log(detail);
   return (
     <>
       <div className="line-background">
@@ -85,10 +100,15 @@ function Detail() {
             </div>
 
             <div style={{ display: "flex", columnGap: "0.5rem" }}>
-              <button className="fav-btn">
-                <BsFillPlayBtnFill />
-                Watch Trailer
-              </button>
+              <a
+                target={"_blank"}
+                href={`https://www.youtube.com/watch?v=${trailer}`}
+              >
+                <button className="fav-btn" onClick={fetchTrailer}>
+                  <BsFillPlayBtnFill />
+                  Watch Trailer
+                </button>
+              </a>
 
               <button
                 className="fav-btn"
